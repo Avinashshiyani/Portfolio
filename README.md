@@ -1,2 +1,2 @@
 # Portfolio
-This is my portfolio . In htis Thing i have mention all my things . 
+This is my portfolio . In This Thing i have mention all my things . 
