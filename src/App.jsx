@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
+import Body from './Components/Body'
 
 const App = () => {
   return (
-    <div className='px-[96px]'>
+    <div className=' grid container mx-auto px-[26px]'>
       <Navbar />
+      <Body />
     </div>
   )
 }
