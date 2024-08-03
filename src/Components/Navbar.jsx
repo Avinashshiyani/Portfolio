@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -7,9 +8,15 @@ const Navbar = () => {
                 Avinash Shiyani
             </div>
             <div className='flex items-center space-x-[48px] text-white text-[18px]'>
-                <span>Home</span>
-                <span>About Me</span>
-                <span>Contact</span>
+                <Link to="/">
+                    <span>Home</span>
+                </Link>
+                <Link to="/about">
+                    <span>About Me</span>
+                </Link>
+                <Link to="/contact">
+                    <span>Contact</span>
+                </Link>
             </div>
         </div>
     )

@@ -25,7 +25,7 @@ const Body = () => {
             </div>
 
             <div className='flex items-center justify-end  w-full'>
-                <img src={Avatar} className='h-[500px]' />
+                <img src={Avatar} className='h-[550px]' />
             </div>
         </div>
     )
