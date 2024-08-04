@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar'
 import Body from './Components/Body'
 import { BrowserRouter as Path, Routes, Route } from 'react-router-dom'
 import About from './Components/About'
+import PageNotFound from './PageNotFound'
+
 const App = () => {
   return (
     <div className=' grid  px-[50px] max-w-screen-xl mx-auto'>
@@ -11,6 +13,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Body />} />
           <Route path='/about' element={<About />} />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
       </Path>
     </div>
