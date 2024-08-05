@@ -31,7 +31,8 @@ const Body = () => {
     )
 }
 
-export default Body;
+export default Body ;
+export {Button};
 
 const Button = ({ children = "Button", type = "primary" }) => {
     return (
