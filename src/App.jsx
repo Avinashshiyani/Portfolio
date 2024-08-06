@@ -5,6 +5,7 @@ import { BrowserRouter as Path, Routes, Route } from "react-router-dom";
 import About from "./Components/About";
 import PageNotFound from "./PageNotFound";
 import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <Footer />
       </Path>
     </div>
   );
