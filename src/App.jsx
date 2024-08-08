@@ -10,7 +10,7 @@ import Projects from "./Components/Projects";
 
 const App = () => {
   return (
-    <div className=" grid  px-[50px] max-w-screen-2xl mx-auto">
+    <div className=" grid relative px-[50px] max-w-screen-2xl mx-auto">
       <Path>
         <Navbar />
         <Routes>
