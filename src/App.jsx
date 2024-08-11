@@ -7,6 +7,7 @@ import PageNotFound from "./PageNotFound";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
+import AllProjects from "./Components/AllProjects";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/allprojects" element={<AllProjects />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

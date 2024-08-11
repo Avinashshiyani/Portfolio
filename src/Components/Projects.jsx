@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectPage from "../assets/projectpage.png";
 import LandingPageOne from "../assets/landingPageOne.png";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -16,6 +16,14 @@ const Projects = () => {
         <div className="grid  items-start  w-full ">
           <div className="grid sm:grid-cols-2 md:grid-cols-3  gap-[26px]  ">
             <Project />
+          </div>
+        </div>
+        {/* view all div */}
+        <div className="flex items-center justify-end py-[20px] z-[10]">
+          <div className="text-[18px] text-white">
+            <Link to="/allprojects">
+              <span>View All </span>
+            </Link>
           </div>
         </div>
       </div>
