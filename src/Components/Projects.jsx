@@ -32,6 +32,7 @@ const Projects = () => {
 };
 
 export default Projects;
+export { Project };
 
 const Project = ({ img = LandingPageOne, name = "React Mock" }) => {
   return (
