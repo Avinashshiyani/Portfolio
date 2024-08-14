@@ -6,6 +6,7 @@ import FacebookImg from "../assets/facebook.png";
 import InstagramImg from "../assets/instagram.png";
 import TwitterImg from "../assets/twitter.png";
 import YoutubeImg from "../assets/youtube.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,8 +14,8 @@ const Footer = () => {
       {/* Navigation butons */}
       <div className="flex items-center space-x-[48px]">
         <NavButton name="Home" img={HomeImg} />
-        <NavButton name="About me" img={AboutMeImg} />
-        <NavButton name="Contact" img={PhoneImg} />
+        <NavButton name="About me" img={AboutMeImg} link="about" />
+        <NavButton name="Contact" img={PhoneImg} link="contact" />
       </div>
       {/* social Media Icons */}
       <div className="flex items-center space-x-[24px] pt-[38px]  justify-center">
@@ -29,14 +30,16 @@ const Footer = () => {
 
 export default Footer;
 
-const NavButton = ({ img = HomeImg, name = "Home" }) => {
+const NavButton = ({ img = HomeImg, name = "Home", link = "" }) => {
   return (
-    <div className="flex space-x-[10px]">
-      <span>
-        <img src={img} alt="" />
-      </span>
-      <span className="text-[18px] text-white">{name}</span>
-    </div>
+    <Link to={`/${link}`}>
+      <div className="flex space-x-[10px]">
+        <span>
+          <img src={img} alt="" />
+        </span>
+        <span className="text-[18px] text-white">{name}</span>
+      </div>
+    </Link>
   );
 };
 

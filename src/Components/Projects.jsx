@@ -36,15 +36,17 @@ export { Project };
 
 const Project = ({ img = LandingPageOne, name = "React Mock" }) => {
   return (
-    <div>
-      <div className="grid   items-center rounded-lg py-[6px] px-[12px] bg-[#393E46]  ">
-        <div className="flex  justify-center">
-          <img src={img} alt="" className="h-[250px] w-full rounded-lg" />
-        </div>
-        <div className="font-bold text-[#FFFFFF] text-[18px]  py-[4px] ">
-          <span>{name}</span>
+    <Link to="">
+      <div>
+        <div className="grid   items-center rounded-lg py-[6px] px-[12px] bg-[#393E46]  ">
+          <div className="flex  justify-center">
+            <img src={img} alt="" className="h-[250px] w-full rounded-lg" />
+          </div>
+          <div className="font-bold text-[#FFFFFF] text-[18px]  py-[4px] ">
+            <span>{name}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
