@@ -19,8 +19,8 @@ const Footer = () => {
       </div>
       {/* social Media Icons */}
       <div className="flex items-center space-x-[24px] pt-[38px]  justify-center">
-        <MediaIcons img={FacebookImg} />
-        <MediaIcons img={InstagramImg} />
+        <MediaIcons img={FacebookImg} link={facebookLink} />
+        <MediaIcons img={InstagramImg} link={instagramLink} />
         <MediaIcons img={TwitterImg} />
         <MediaIcons img={YoutubeImg} />
       </div>
@@ -43,10 +43,17 @@ const NavButton = ({ img = HomeImg, name = "Home", link = "" }) => {
   );
 };
 
-const MediaIcons = ({ img = FacebookImg }) => {
+// socialmedia links
+let facebookLink = "https://www.facebook.com/avinash.shiyani.56/";
+let instagramLink = "https://www.instagram.com/shiyaniavinash/";
+
+// media icon component
+const MediaIcons = ({ img = FacebookImg, link = facebookLink }) => {
   return (
-    <div className="flex rounded-full p-[12px] bg-[#393E46]">
-      <img src={img} alt="" />
-    </div>
+    <Link to={link}>
+      <div className="flex rounded-full p-[12px] bg-[#393E46]">
+        <img src={img} alt="" />
+      </div>
+    </Link>
   );
 };
