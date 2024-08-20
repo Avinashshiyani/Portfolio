@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {
   return (
@@ -8,21 +9,31 @@ const Navbar = () => {
         Avinash Shiyani
       </div>
       <div className="flex items-center space-x-[48px] text-white text-[18px]">
-        <Link to="/">
-          <span>Home</span>
-        </Link>
-        <Link to="/about">
-          <span>About Me</span>
-        </Link>
-        <Link to="/projects">
-          <span>Projects</span>
-        </Link>
-        <Link to="/contact">
-          <span>Contact</span>
-        </Link>
+        <Navigation link="/">Home</Navigation>
+        <Navigation link="/about">About Me</Navigation>
+        <Navigation link="/projects">Projects</Navigation>
+        <Navigation link="/contact">Contact</Navigation>
       </div>
     </div>
   );
 };
 
 export default Navbar;
+
+const Navigation = ({ link, children }) => {
+  const location = useLocation();
+  const isActive = location.pathname === link;
+
+  return (
+    <NavLink to={link} className="grid items-center justify-center">
+      <span>{children}</span>
+
+      <span
+        className={twMerge(
+          "h-[2px] w-full bg-secondary mt-[0.5px] ",
+          isActive ? "block" : "hidden"
+        )}
+      ></span>
+    </NavLink>
+  );
+};
