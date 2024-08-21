@@ -6,19 +6,21 @@ import FacebookImg from "../assets/facebook.png";
 import InstagramImg from "../assets/instagram.png";
 import TwitterImg from "../assets/twitter.png";
 import YoutubeImg from "../assets/youtube.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="grid justify-center items-center pt-[100px] pb-[130px]">
       {/* Navigation butons */}
       <div className="flex items-center space-x-[48px]">
-        <NavButton name="Home" img={HomeImg} />
-        <NavButton name="About me" img={AboutMeImg} link="about" />
-        <NavButton name="Contact" img={PhoneImg} link="contact" />
+        <NavButton name="Home" img={HomeImg} link="/" />
+        <NavButton name="About me" img={AboutMeImg} link="/about" />
+        <NavButton name="Contact" img={PhoneImg} link="/contact" />
       </div>
       {/* social Media Icons */}
-      <div className="flex items-center space-x-[24px] pt-[38px]  justify-center">
+      <div className="flex items-center space-x-[24px] pt-[38px] justify-center">
         <MediaIcons img={FacebookImg} link={facebookLink} />
         <MediaIcons img={InstagramImg} link={instagramLink} />
         <MediaIcons img={TwitterImg} />
@@ -30,16 +32,30 @@ const Footer = () => {
 
 export default Footer;
 
-const NavButton = ({ img = HomeImg, name = "Home", link = "" }) => {
+const NavButton = ({ img = HomeImg, name = "Home", link = "/" }) => {
+  const location = useLocation();
+  const isActive = location.pathname == link;
+  console.log(isActive);
+
   return (
-    <Link to={`/${link}`}>
-      <div className="flex space-x-[10px]">
-        <span>
-          <img src={img} alt="" />
-        </span>
-        <span className="text-[18px] text-white">{name}</span>
+    <NavLink to={`${link}`}>
+      <div className="grid items-center justify-center">
+        <div className="flex space-x-[10px]">
+          <span>
+            <img src={img} alt="" />
+          </span>
+          <span className="text-[18px] text-white">{name}</span>
+        </div>
+        <div className="flex justify-center items-center">
+          <span
+            className={twMerge(
+              "h-[2px] w-full bg-secondary mt-[2px] ",
+              isActive ? "block" : "hidden"
+            )}
+          ></span>
+        </div>
       </div>
-    </Link>
+    </NavLink>
   );
 };
 
