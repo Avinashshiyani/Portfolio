@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
+import { CiLight } from "react-icons/ci";
 
 const Navbar = () => {
   return (
@@ -13,6 +14,9 @@ const Navbar = () => {
         <Navigation link="/about">About Me</Navigation>
         <Navigation link="/projects">Projects</Navigation>
         <Navigation link="/contact">Contact</Navigation>
+        <span>
+          <CiLight />
+        </span>
       </div>
     </div>
   );
