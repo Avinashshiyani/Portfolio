@@ -35,7 +35,6 @@ export default Footer;
 const NavButton = ({ img = HomeImg, name = "Home", link = "/" }) => {
   const location = useLocation();
   const isActive = location.pathname == link;
-  console.log(isActive);
 
   return (
     <NavLink to={`${link}`}>
