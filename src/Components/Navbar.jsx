@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div
       className={twMerge(
-        "flex justify-between py-5 fixed z-10 w-full px-12 text-white "
+        "flex justify-between py-5 fixed z-10 w-full px-12 text-white bg-primary"
       )}
     >
       <div className="flex items-center font-bold text-2xl whitespace-nowrap theme">
