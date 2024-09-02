@@ -2,29 +2,12 @@ import React, { useState, useContext, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import { CiLight } from "react-icons/ci";
-import Context from "../Context/Context";
 
 const Navbar = () => {
-  // Get mode from context
-  const switchMode = useContext(Context);
-  const [mode, setMode] = useState(switchMode);
-
-  // Toggle between light and dark modes
-  const toggleMode = () => {
-    const newMode = mode === "dark" ? "light" : "dark";
-    setMode(newMode);
-  };
-
-  const theme = mode === "light" ? "bg-red-300 text-black" : "";
-
-  useEffect(() => {
-    document.body.className = "theme";
-  }, [mode]);
   return (
     <div
       className={twMerge(
-        "flex justify-between py-5 fixed z-10 w-full px-12 text-white bg-primary",
-        theme
+        "flex justify-between py-5 fixed z-10 w-full px-12 text-white "
       )}
     >
       <div className="flex items-center font-bold text-2xl whitespace-nowrap theme">
@@ -35,7 +18,7 @@ const Navbar = () => {
         <Navigation link="/about">About Me</Navigation>
         <Navigation link="/projects">Projects</Navigation>
         <Navigation link="/contact">Contact</Navigation>
-        <span className="cursor-pointer" onClick={toggleMode}>
+        <span className="cursor-pointer">
           <CiLight />
         </span>
       </div>
