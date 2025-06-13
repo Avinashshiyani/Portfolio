@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./Navbar/Navbar";
 
 const App = () => {
   return (
-    <div className=''>
-      Hello d
+    <div className="bg-red-400">
+      <Navbar />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
