@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex items-center justify-center space-x-[16px] ">
         <div>
           <button
-            className="flex justify-center items-center h-[30px] bg-[#5e3bee] py-[4px] px-[16px] text-white rounded-[4px] text-[14px] cursor-pointer
+            className="flex justify-center items-center h-[30px] bg-[#5e3bee] py-[4px] px-[16px] text-white rounded-[4px] text-[16px] cursor-pointer
   hover:bg-white hover:text-[#5e3bee] hover:border hover:border-[#5e3bee] 
   sm:h-[40px] sm:py-[8px] sm:px-[20px] transition-all duration-300"
           >
