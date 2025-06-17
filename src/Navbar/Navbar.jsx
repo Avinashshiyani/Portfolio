@@ -3,7 +3,7 @@ import Logo from "../assets/download.webp";
 
 const Navbar = () => {
   return (
-    <div className="h-[64px] bg-white flex justify-between items-center px-[20px] border-b sm:h-[90px] lg:px-[64px]">
+    <div className="h-[64px] bg-white flex justify-between items-center px-[20px] border-b  border-[#BDBDBD] sm:h-[90px] lg:px-[64px]">
       {/* logo */}
       <div className="flex items-center justify-center h-[48px] cursor-pointer">
         <img src={Logo} alt="" className="h-[24px] sm:h-[30px]" />
