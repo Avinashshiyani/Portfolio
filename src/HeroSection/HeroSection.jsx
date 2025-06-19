@@ -3,7 +3,7 @@ import HeroImage from "../assets/download_2.webp";
 
 const HeroSection = () => {
   return (
-    <div className="py-[56px] px-[20px] bg-[#F5FCFF] sm:px-[40px] md:px-[64px] md:flex md:gap-x-[34px]">
+    <div className="py-[56px] m px-[20px] bg-[#F5FCFF] sm:px-[40px] md:px-[64px] md:flex md:gap-x-[34px] md:py-[80px] lg:py-[100px]">
       {/* hero section first part starts */}
       <div className="space-y-2 md:w-[50%]  lg:flex lg:flex-col lg:justify-center">
         <div className="text-[16px] text-[#1c1e53] font-medium w-full">
