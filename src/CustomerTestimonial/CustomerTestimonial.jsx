@@ -33,7 +33,7 @@ const CustomerTestimonial = () => {
 
 let CustomerCard = ({ image, info, profileImg, name, company }) => {
   return (
-    <div className="grid border-1 border-[#006B6A] text-[#1c1e53] p-[32px] rounded-sm space-y-[32px]">
+    <div className="grid border-1 border-[#006B6A] text-[#1c1e53] p-[32px] rounded-sm space-y-[32px] hover:border-[#5e3bee]">
       {/* image */}
       <div className="flex ">
         <img src={image} alt="" className="w-[116px] h-[20px]" />
