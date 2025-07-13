@@ -5,6 +5,7 @@ import SkillSection from "./SkillSection/SkillSection";
 import AboutUs from "./AboutSection/AboutUs";
 import Portfolio from "./Portfolio/Portfolio";
 import CustomerTestimonial from "./CustomerTestimonial/CustomerTestimonial";
+import ContactSection from "./ContactSection/ContactSection";
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
       <AboutUs />
       <Portfolio />
       <CustomerTestimonial />
+      {/* <div className="grid justify-center "> */}
+        <ContactSection />
+      {/* </div> */}
     </div>
   );
 };
